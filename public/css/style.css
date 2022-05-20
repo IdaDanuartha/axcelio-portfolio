@@ -2,7 +2,7 @@
 :root {
     --sidebar-color: #570a57;
     --body-color: #2E0249;
-    --h3-color: #F806CC;
+    --heading-color: #F806CC;
 }
 
 body {
@@ -17,12 +17,21 @@ body {
     background-color: var(--sidebar-color);
 }
 
+#sidebar img {
+    transition: all 0.4s;
+}
+
+#sidebar img:hover {
+    transform: translateY(-7px);
+}
+
 #main {
     background-color: var(--body-color);
 }
 
-h3 {
-    color: var(--h3-color);
+h3,
+h6 {
+    color: var(--heading-color);
 }
 
 p {
@@ -33,9 +42,30 @@ p {
     font-size: 1.7rem;
     color: white;
     text-decoration: none;
+    transition: all 0.4s;
+}
+
+#social-icons>a:hover {
+    transform: translateY(-5px);
 }
 
 #navbar>a {
     color: white;
     text-decoration: none;
+}
+
+#btn-kirim {
+    background: linear-gradient(to bottom, #A91079, #570A57);
+}
+
+#btn-kirim:focus {
+    outline: #570A57 solid 5px;
+}
+
+#card-container .row .col-4 img {
+    transition: all 0.4s;
+}
+
+#card-container .row .col-4 img:hover {
+    transform: scale(1.05);
 }

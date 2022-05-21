@@ -69,3 +69,45 @@ p {
 #card-container .row .col-4 img:hover {
     transform: scale(1.05);
 }
+
+.sidebar-responsive {
+    width: 300px;
+    background-color: #333;
+    position: fixed;
+    left: 0;
+    top: 0;
+    min-height: 100vh;
+    z-index: 999;
+    transform: translateX(-300px);
+    transition: all .3s ease-out;
+}
+
+@keyframes slide {
+    from {
+        left: -350px;
+    }
+    to {
+        left: 0;
+    }
+}
+
+@keyframes slide-close {
+    from {
+        left: 0;
+    }
+    to {
+        left: -350px;
+    }
+}
+
+.trigger-animation {
+    animation: slide 0.4s;
+    z-index: 999;
+    position: fixed;
+    width: 300px;
+    display: block;
+}
+
+.trigger-animation-close {
+    animation: slide-close 0.4s;
+}
